@@ -52,7 +52,9 @@ export async function findInTable(table: Table, baseFilePath: string, direction:
             const glob = rule.glob(match.slice(1));
             try {
                 const uris = await findFiles(glob);
-                return uris[0];
+                if (uris.length) {
+                    return uris[0];
+                }
             } catch {}
         }
     }
