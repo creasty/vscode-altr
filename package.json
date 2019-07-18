@@ -1,7 +1,7 @@
 {
 	"name": "vscode-altr",
-	"displayName": "vscode-altr",
-	"description": "vim-altr for VSCode",
+	"displayName": "Altr",
+	"description": "Switching among related files",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.36.0"
