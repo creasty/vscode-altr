@@ -3,10 +3,10 @@
 	"name": "vscode-altr",
 	"displayName": "Altr",
 	"description": "Switching among related files",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/creasty/vscode-altr"
+		"url": "https://github.com/creasty/vscode-altr.git"
 	},
 	"engines": {
 		"vscode": "^1.36.0"
@@ -38,8 +38,10 @@
 					"default": [
 						["%.c", "%.h", "%.m"],
 						["package.json", "package-lock.json", "yarn.lock"],
-						["src/%.jsx?", "src/%.test.jsx?", "test/%.jsx?", "test/%.test.jsx?"],
-						["src/%.tsx?", "src/%.test.tsx?", "test/%.tsx?", "test/%.test.tsx?"],
+						["src/%.js", "src/%.test.js", "test/%.js", "test/%.test.js"],
+						["src/%.jsx", "src/%.test.jsx", "test/%.jsx", "test/%.test.jsx"],
+						["src/%.ts", "src/%.test.ts", "test/%.ts", "test/%.test.ts"],
+						["src/%.tsx", "src/%.test.tsx", "test/%.tsx", "test/%.test.tsx"],
 						["Gemfile", "Gemfile.lock"],
 						["app/models/%.rb", "spec/models/%_spec.rb", "app/serializers/%_serializer.rb", "app/policies/%_policy.rb"],
 						["app/%/%.rb", "spec/%/%_spec.rb"],
@@ -48,7 +50,9 @@
 						["Gopkg.toml", "Gopkg.lock"],
 						["%.go", "%_test.go", "%_mock.go", "%_ex_test.go"],
 						["docker-compose.yml", "Dockerfile"],
-						[".env", ".env.sample"]
+						[".env", ".env.sample"],
+						["keybindings.json", "settings.json"],
+						[".vscode/extensions.json", ".vscode/launch.json", ".vscode/settings.json", ".vscode/tasks.json"]
 					]
 				}
 			}

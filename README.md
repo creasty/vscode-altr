@@ -19,11 +19,12 @@ With this extension, you can cycle among these files with a single command, so y
     "altr.rules": [
         ["%.c", "%.h", "%.m"],
         ["package.json", "package-lock.json", "yarn.lock"],
-        ["src/%.jsx?", "src/%.test.jsx?", "test/%.jsx?", "test/%.test.jsx?"],
-        ...
+        ["src/%.js", "src/%.test.js", "test/%.js", "test/%.test.js"]
     ]
 }
 ```
+
+See `contributes.configuration` for the default rules.
 
 - Groups: `["%.c", "%.h", "%.m"]`, `["package.json", "package-lock.json", "yarn.lock"]`, ...
   - Patterns: `%.c`, `%.h`, ..., `package.json`, ...
@@ -37,8 +38,6 @@ Patterns can have the following syntax:
 - `%`
   - Acts as a placeholder, which is replaced with the current pattern, for the other files.
   - Matches any number of path segments, including none.
-- `?`
-  - Matches on one character in a path segment.
 
 ## Acknowledgement
 
