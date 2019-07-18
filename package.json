@@ -10,16 +10,33 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:altr.switchToNextFile",
+		"onCommand:altr.switchToPreviousFile"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "altr.switchToNextFile",
+				"title": "Altr: Switch to next file"
+			},
+			{
+				"command": "altr.switchToPreviousFile",
+				"title": "Altr: Switch to previous file"
 			}
-		]
+		],
+		"configuration": {
+			"title": "vscode-alter rules",
+			"properties": {
+				"altr.rules": {
+					"type": "array",
+					"default": [
+						["package.json", "package-lock.json", "yarn.lock"],
+						["app/models/%.rb", "spec/models/%_spec.rb", "spec/factories/%s.rb"]
+					]
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
