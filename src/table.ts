@@ -19,6 +19,7 @@ export function getTable(config: string[][]): Table {
 
         const group = patterns.map(p => new Rule(p));
         group.forEach((rule, ruleIndex) => {
+            // TODO: Merge groups for the same rule
             table.push({ rule, ruleIndex, group });
         });
     });
@@ -43,7 +44,7 @@ export async function findInTable(table: Table, baseFilePath: string, direction:
                 break;
             }
             case 'back': {
-                group = group.slice(ruleIndex + 1).concat(group.slice(0, ruleIndex)); // TODO:
+                group = group.slice(0, ruleIndex).reverse().concat(group.slice(ruleIndex + 1).reverse());
                 break;
             }
         }
