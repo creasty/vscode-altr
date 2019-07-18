@@ -31,8 +31,21 @@
 				"altr.rules": {
 					"type": "array",
 					"default": [
+						["%.c", "%.h", "%.m"],
 						["package.json", "package-lock.json", "yarn.lock"],
-						["app/models/%.rb", "spec/models/%_spec.rb", "spec/factories/%s.rb"]
+						["%.js", "%.ts", "%.jsx", "%.tsx", "%.css"],
+						["src/%.jsx?", "src/%.test.jsx?", "test/%.jsx?", "test/%.test.jsx?"],
+						["src/%.tsx?", "src/%.test.tsx?", "test/%.tsx?", "test/%.test.tsx?"],
+						["Gemfile", "Gemfile.lock"],
+						["app/models/%.rb", "spec/models/%_spec.rb", "spec/factories/%s.rb"],
+						["app/serializers/%_serializer.rb", "app/policies/%_policy.rb"],
+						["app/%/%.rb", "spec/%/%_spec.rb"],
+						["lib/%.rb", "spec/lib/%_spec.rb"],
+						["glide.yaml", "glide.lock"],
+						["Gopkg.toml", "Gopkg.lock"],
+						["%.go", "%_test.go", "%_mock.go", "%_ex_test.go"],
+						["docker-compose.yml", "Dockerfile"],
+						[".env", ".env.sample"]
 					]
 				}
 			}
