@@ -26,19 +26,17 @@
 			}
 		],
 		"configuration": {
-			"title": "vscode-alter rules",
+			"title": "vscode-altr rules",
 			"properties": {
 				"altr.rules": {
 					"type": "array",
 					"default": [
 						["%.c", "%.h", "%.m"],
 						["package.json", "package-lock.json", "yarn.lock"],
-						["%.js", "%.ts", "%.jsx", "%.tsx", "%.css"],
 						["src/%.jsx?", "src/%.test.jsx?", "test/%.jsx?", "test/%.test.jsx?"],
 						["src/%.tsx?", "src/%.test.tsx?", "test/%.tsx?", "test/%.test.tsx?"],
 						["Gemfile", "Gemfile.lock"],
-						["app/models/%.rb", "spec/models/%_spec.rb", "spec/factories/%s.rb"],
-						["app/serializers/%_serializer.rb", "app/policies/%_policy.rb"],
+						["app/models/%.rb", "spec/models/%_spec.rb", "app/serializers/%_serializer.rb", "app/policies/%_policy.rb"],
 						["app/%/%.rb", "spec/%/%_spec.rb"],
 						["lib/%.rb", "spec/lib/%_spec.rb"],
 						["glide.yaml", "glide.lock"],

@@ -19,7 +19,6 @@ export function getTable(config: string[][]): Table {
 
         const group = patterns.map(p => new Rule(p));
         group.forEach((rule, ruleIndex) => {
-            // TODO: Merge groups for the same rule
             table.push({ rule, ruleIndex, group });
         });
     });
