@@ -1,4 +1,5 @@
 {
+	"publisher": "creasty",
 	"name": "vscode-altr",
 	"displayName": "Altr",
 	"description": "Switching among related files",
