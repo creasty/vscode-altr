@@ -9,10 +9,11 @@ export interface TableEntry {
 
 export type Table = TableEntry[];
 
-export function getTable(config: string[][]): Table {
+export function computeTable(config: vscode.WorkspaceConfiguration): Table {
+  const rules = config.get("rules") as string[][];
   const table: Table = [];
 
-  config.forEach(patterns => {
+  rules.forEach(patterns => {
     if (patterns.length < 2) {
       return;
     }
