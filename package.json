@@ -3,7 +3,7 @@
   "name": "vscode-altr",
   "displayName": "Altr",
   "description": "Switching among related files",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/creasty/vscode-altr.git"
