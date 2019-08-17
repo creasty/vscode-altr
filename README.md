@@ -16,11 +16,11 @@ With this extension, you can cycle among these files with a single command, so y
 
 ```json
 {
-    "altr.rules": [
-        ["%.c", "%.h", "%.m"],
-        ["package.json", "package-lock.json", "yarn.lock"],
-        ["src/%.js", "src/%.test.js", "test/%.js", "test/%.test.js"]
-    ]
+  "altr.rules": [
+    ["%.c", "%.h", "%.m"],
+    ["package.json", "package-lock.json", "yarn.lock"],
+    ["src/%.js", "src/%.test.js", "test/%.js", "test/%.test.js"]
+  ]
 }
 ```
 

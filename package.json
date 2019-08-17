@@ -1,79 +1,79 @@
 {
-	"publisher": "creasty",
-	"name": "vscode-altr",
-	"displayName": "Altr",
-	"description": "Switching among related files",
-	"version": "0.0.2",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/creasty/vscode-altr.git"
-	},
-	"engines": {
-		"vscode": "^1.36.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:altr.switchToNextFile",
-		"onCommand:altr.switchToPreviousFile"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "altr.switchToNextFile",
-				"title": "Altr: Switch to next file"
-			},
-			{
-				"command": "altr.switchToPreviousFile",
-				"title": "Altr: Switch to previous file"
-			}
-		],
-		"configuration": {
-			"title": "vscode-altr rules",
-			"properties": {
-				"altr.rules": {
-					"type": "array",
-					"default": [
-						["%.c", "%.h", "%.m"],
-						["package.json", "package-lock.json", "yarn.lock"],
-						["src/%.js", "src/%.test.js", "test/%.js", "test/%.test.js"],
-						["src/%.jsx", "src/%.test.jsx", "test/%.jsx", "test/%.test.jsx"],
-						["src/%.ts", "src/%.test.ts", "test/%.ts", "test/%.test.ts"],
-						["src/%.tsx", "src/%.test.tsx", "test/%.tsx", "test/%.test.tsx"],
-						["Gemfile", "Gemfile.lock"],
-						["app/models/%.rb", "spec/models/%_spec.rb", "app/serializers/%_serializer.rb", "app/policies/%_policy.rb"],
-						["app/%/%.rb", "spec/%/%_spec.rb"],
-						["lib/%.rb", "spec/lib/%_spec.rb"],
-						["glide.yaml", "glide.lock"],
-						["Gopkg.toml", "Gopkg.lock"],
-						["%.go", "%_test.go", "%_mock.go", "%_ex_test.go"],
-						["docker-compose.yml", "Dockerfile"],
-						[".env", ".env.sample"],
-						["keybindings.json", "settings.json"],
-						[".vscode/extensions.json", ".vscode/launch.json", ".vscode/settings.json", ".vscode/tasks.json"]
-					]
-				}
-			}
-		}
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^5.2.6",
-		"@types/node": "^10.12.21",
-		"@types/vscode": "^1.36.0",
-		"glob": "^7.1.4",
-		"mocha": "^6.1.4",
-		"typescript": "^3.3.1",
-		"tslint": "^5.12.1",
-		"vscode-test": "^1.0.0-next.0"
-	}
+  "publisher": "creasty",
+  "name": "vscode-altr",
+  "displayName": "Altr",
+  "description": "Switching among related files",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/creasty/vscode-altr.git"
+  },
+  "engines": {
+    "vscode": "^1.36.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:altr.switchToNextFile",
+    "onCommand:altr.switchToPreviousFile"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "altr.switchToNextFile",
+        "title": "Altr: Switch to next file"
+      },
+      {
+        "command": "altr.switchToPreviousFile",
+        "title": "Altr: Switch to previous file"
+      }
+    ],
+    "configuration": {
+      "title": "vscode-altr rules",
+      "properties": {
+        "altr.rules": {
+          "type": "array",
+          "default": [
+            ["%.c", "%.h", "%.m"],
+            ["package.json", "package-lock.json", "yarn.lock"],
+            ["src/%.js", "src/%.test.js", "test/%.js", "test/%.test.js"],
+            ["src/%.jsx", "src/%.test.jsx", "test/%.jsx", "test/%.test.jsx"],
+            ["src/%.ts", "src/%.test.ts", "test/%.ts", "test/%.test.ts"],
+            ["src/%.tsx", "src/%.test.tsx", "test/%.tsx", "test/%.test.tsx"],
+            ["Gemfile", "Gemfile.lock"],
+            ["app/models/%.rb", "spec/models/%_spec.rb", "app/serializers/%_serializer.rb", "app/policies/%_policy.rb"],
+            ["app/%/%.rb", "spec/%/%_spec.rb"],
+            ["lib/%.rb", "spec/lib/%_spec.rb"],
+            ["glide.yaml", "glide.lock"],
+            ["Gopkg.toml", "Gopkg.lock"],
+            ["%.go", "%_test.go", "%_mock.go", "%_ex_test.go"],
+            ["docker-compose.yml", "Dockerfile"],
+            [".env", ".env.sample"],
+            ["keybindings.json", "settings.json"],
+            [".vscode/extensions.json", ".vscode/launch.json", ".vscode/settings.json", ".vscode/tasks.json"]
+          ]
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^10.12.21",
+    "@types/vscode": "^1.36.0",
+    "glob": "^7.1.4",
+    "mocha": "^6.1.4",
+    "typescript": "^3.3.1",
+    "tslint": "^5.12.1",
+    "vscode-test": "^1.0.0-next.0"
+  }
 }
